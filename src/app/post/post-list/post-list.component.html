@@ -1,0 +1,18 @@
+<div>
+  <h2>Post List</h2>
+</div>
+<a routerLink="/">Create Post</a>
+<div *ngFor="let post of postData;let id=index of postData" class="list" >
+  <div>
+    <span class="list-title">Title :</span><a [routerLink]="['/post-details', id]">{{post.title}}</a><span>
+     
+    </span>
+  </div>
+  <div><span class="list-desc">Description :</span>{{post.desc}}</div>
+
+  <input type="button" value="Edit" [routerLink]="['/post-edit', id]">
+<input type="button"  value="Delete" (click)="deletePost(id)">
+</div>
+<div>
+
+

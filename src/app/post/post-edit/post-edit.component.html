@@ -1,0 +1,38 @@
+<div>
+  <h2>Edit Post</h2>
+</div>
+<div *ngIf="postData" class="NewPost">
+
+
+  <form [formGroup]="postForm">
+
+    <div class="form-group top">
+      <span class="list-title " routerLink="/post-details">Title : </span>
+      <input type="text" class="t1" formControlName="title" (click)="postData.isEditable=!postData.isEditable">
+    </div>
+
+    <div class="form-group top">
+      <span class="list-title">Sub Title : </span>
+      <input type="text" class="subt" formControlName="subtitle" (click)="postData.isEditable=!postData.isEditable">
+    </div>
+
+    <div class="form-group top">
+      <span class="list-title">Post Type : </span>
+      <input type="text" class="s1" formControlName="typ" (click)="postData.isEditable=!postData.isEditable">
+    </div>
+
+    <div class="form-group top">
+      <span class="list-title">Description : </span>
+      <textarea class="desc" cols="56" rows="5" formControlName="descp" (click)="postData.isEditable=!postData.isEditable">
+      </textarea>
+    </div>
+
+
+    <button type="submit" class="btnEdit" (click)="editPost(id)">Save</button>
+
+  </form>
+
+  <div>
+    <a routerLink="/post-list">Post List</a>
+  </div>
+</div>

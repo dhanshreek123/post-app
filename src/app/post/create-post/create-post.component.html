@@ -1,0 +1,47 @@
+<div>
+  <h2>Create NewPost</h2>
+</div>
+<div class="NewPost">
+  <form [formGroup]="postForm" (ngSubmit)="saveData(postForm)">
+
+
+    <div class="form-group">
+      Title :<input type="text" class="t1" formControlName="title" [ngClass]="{'is-invalid' : submitted && f.title.errors}">
+      <div *ngIf="submitted && f.title.errors" class="invalid-feedback" class="align-err">
+        <div *ngIf="f.title.errors.required">Title is required</div>
+      </div>
+    </div>
+
+    <div class="form-group">
+      Sub Title :<input type="text" class="s1" formControlName="subtitle" [ngClass]="{'is-invalid' : submitted && f.subtitle.errors}">
+      <div *ngIf="submitted && f.subtitle.errors" class="invalid-feedback" class="align-err">
+        <div *ngIf="f.subtitle.errors.required">Sub title is required</div>
+      </div>
+    </div>
+
+    <div class="form-group">
+      Post Type :<input type="text" class="ptype" formControlName="typ" [ngClass]="{'is-invalid' : submitted && f.typ.errors}">
+      <div *ngIf="submitted && f.typ.errors" class="invalid-feedback" class="align-err">
+        <div *ngIf="f.typ.errors.required">Post Type is required</div>
+      </div>
+    </div>
+
+    <div class="form-group">
+      Description :<textarea class="desc" cols="56" rows="5" formControlName="descp" [ngClass]="{'is-invalid' : submitted && f.descp.errors}"></textarea>
+      <div *ngIf="submitted && f.descp.errors" class="invalid-feedback" class="align-err">
+        <div *ngIf="f.descp.errors.required">Description is required</div>
+      </div>
+    </div>
+
+    <div class="btn">
+      <span><button type="reset" value="Reset">cancel</button></span>
+      <span><button type="submit" value="Submit">save</button></span>
+    </div>
+
+  </form>
+
+  <div>
+    <a routerLink="/post-list">Post List</a>
+  </div>
+
+</div>

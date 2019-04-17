@@ -1,0 +1,66 @@
+h2
+{
+    background-color:rgb(24, 162, 241);
+    max-width:100%;
+    height: 60px;
+    text-align: center;
+    padding-top:20px; 
+    font-weight: lighter;
+    font-size: 37px;
+    
+}
+
+.top
+{
+    margin-top:20px;
+}
+
+.list-title
+{
+color:rgb(32, 174, 240);
+}
+.NewPost
+{
+    padding-left:1% ;
+    margin-top:3%;
+    border: 1px solid lightgray;
+}
+.t1
+{
+    margin-left: 5.2em;
+    padding:7px;
+    min-width: 34em;
+}
+.subt
+{
+    margin-left:2.3em; 
+   padding:7px;
+    min-width: 34em;
+   
+}
+.s1
+{
+   margin-left:2.2em; 
+   padding:7px;
+    min-width: 34em;
+   
+}
+.desc
+{  
+    margin-left: 1.3em;   
+    height:auto; 
+}
+
+a{
+    margin-top: 50px;
+    float:left;
+}
+
+button{
+    padding: 10px 15px 10px 15px;
+    border-radius: 3px;
+    margin-right: 10px;
+    margin-top: 30px;
+    float: left;
+}
+
